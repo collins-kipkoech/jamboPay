@@ -8,20 +8,19 @@ import org.openqa.selenium.support.PageFactory;
 
 public class JamboLogin {
 
-    @FindBy(xpath = "//input[@id='phone_number']")
+    @FindBy( id= "phone_number")
     public WebElement userNameField ;
 
-    @FindBy(xpath = "//input[@id='password']")
+    @FindBy(id = "password")
     public WebElement passwordField ;
 
-    @FindBy(css = "//button[@type='submit']")
-    public WebElement loginButton ;
+
 
     @FindBy(xpath = "//h6[.='Welcome back']")
     public WebElement loginHeader;
 
     @FindBy(xpath = "//span[.='LOGIN']")
-    public WebElement login;
+    public WebElement loginBtn;
 
 
     public JamboLogin(){
@@ -37,7 +36,7 @@ public class JamboLogin {
     public void loginCredentialsDisplayed(){
 
         this.loginHeader.isDisplayed();
-        this.login.isDisplayed();
+        this.loginBtn.isDisplayed();
 
     }
 
