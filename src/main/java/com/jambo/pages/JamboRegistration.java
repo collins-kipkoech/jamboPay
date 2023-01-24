@@ -1,5 +1,6 @@
 package com.jambo.pages;
 
+import com.github.javafaker.Faker;
 import com.jambo.utility.ConfigReader;
 import com.jambo.utility.Driver;
 import org.openqa.selenium.WebElement;
@@ -41,7 +42,9 @@ public class JamboRegistration {
     }
 
     public void register(){
-        this.phone_numberBox.sendKeys("0715023823");//enter new number that does not exist in the system
+        Faker faker = new Faker();
+        String phone=faker.phoneNumber().phoneNumber();
+        this.phone_numberBox.sendKeys(phone);//enter new number that does not exist in the system
         this.first_nameBox.sendKeys("Collins");
         this.last_nameBox.sendKeys("Kipkoech");
         this.emailBox.sendKeys("collinskipkoech95@gmail.com");

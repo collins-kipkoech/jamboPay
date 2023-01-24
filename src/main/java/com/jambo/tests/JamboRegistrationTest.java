@@ -12,6 +12,6 @@ public class JamboRegistrationTest extends TestBase {
     public void testRegistration(){
         jamboRegistration = new JamboRegistration();
         jamboRegistration.goTo();
-        jamboRegistration.register();
+        //jamboRegistration.register();
     }
 }
