@@ -34,14 +34,14 @@ public class JamboLoginTest extends TestBase {
         jamboLogin = new JamboLogin();
         jamboLogin.goTo();
 
-//        String actualLoginUrl = driver.getCurrentUrl();
-//        System.out.println(actualLoginUrl);
+        String actualLoginUrl = driver.getCurrentUrl();
+        System.out.println(actualLoginUrl);
 
         String actualUsernameId = jamboLogin.userNameField.getAttribute("id");
         String actualPasswordId = jamboLogin.passwordField.getAttribute("id");
 
 
-        //assertEquals("https://accounts.jambopay.com/v2/account/login",actualLoginUrl);
+        assertEquals("https://accounts.jambopay.com/v2/account/login",actualLoginUrl);
 
         assertEquals("phone_number", jamboLogin.userNameField.getAttribute("id"));
         assertEquals("password",jamboLogin.passwordField.getAttribute("id"));
